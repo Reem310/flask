@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <style>
+        #wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .box {
+            margin: 1% 1%;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            border: 1px black solid;
+            background-color: {{_color}};
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome!</h1>
+    <div id="wrap">
+        {%for i in range(_num)%}
+        <div class="box"></div>
+        {%endfor%}
+    </div>
+</body>
+
+</html>
