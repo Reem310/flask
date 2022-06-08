@@ -17,13 +17,7 @@ def blue_boxes(num):
 
 @app.route('/play/<num>/<color>')
 def boxes_color(num, color):
-    return render_template('index.html', _num=int(num), _color=color)
-
-
-@app.route('/<any>')
-def error(any):
-    return "Sorry! No response. Try again."
-
-
+    return render_template('index.html', _num=int(num), _color=color)   
+    
 if __name__ == "__main__":  
     app.run(debug=True)  
