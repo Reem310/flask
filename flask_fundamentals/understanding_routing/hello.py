@@ -13,7 +13,7 @@ def hi(name):
     print(name)
     return "Hi " + name
 
-@app.route('/hi/repeat/<num>/<name>') # for a route '/hello/____' anything after '/hello/' gets passed as a variable 'name'
+@app.route('/hi/<name>/<num>') # for a route '/hello/____' anything after '/hello/' gets passed as a variable 'name'
 def repeat(num,name):
     return render_template('repeat.html', _num=int(num), _name=name)
 
